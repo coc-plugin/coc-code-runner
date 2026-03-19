@@ -4,7 +4,7 @@ import { getConfigItem } from './config';
 import { executor } from './executor';
 import { rm } from 'fs/promises';
 import { RunCodeActionProvider } from './codeActionProvider';
-let _process: ChildProcessWithoutNullStreams | null = null;
+export let _process: ChildProcessWithoutNullStreams | null = null;
 let _channel: OutputChannel | null = null;
 export async function activate(context: ExtensionContext): Promise<void> {
   const enable = getConfigItem('enable', true);
@@ -21,12 +21,25 @@ export async function activate(context: ExtensionContext): Promise<void> {
       new RunCodeActionProvider(),
       'code-runner'
     ),
+    commands.registerCommand('coc-code-runner.stop', async () => {
+      if (_channel) {
+        _channel.appendLine('[Stopped] Process has been stopped by user.');
+        _channel.hide();
+        _channel.dispose();
+      }
+      if (_process) {
+        _process.kill();
+        _process = null;
+      }
+      window.showInformationMessage('Code execution stopped.');
+    }),
     commands.registerCommand('coc-code-runner.run', async () => {
       if (_channel) {
         _channel.dispose();
       }
       if (_process) {
         _process.kill();
+        _process = null;
       }
       _channel = window.createOutputChannel('coc-code-runner');
       let command:
@@ -71,6 +84,7 @@ export async function activate(context: ExtensionContext): Promise<void> {
           }
           if (_process) {
             _process.kill();
+            _process = null;
           }
         });
         _channel.show(true);

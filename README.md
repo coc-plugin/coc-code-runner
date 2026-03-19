@@ -17,10 +17,12 @@ Code Runner for coc.nvim
 ## Code Actions
 
 - code runner: `coc-code-runner.run`
+- stop code runner: `coc-code-runner.stop`
 
 ## Commands
 
 - `coc-code-runner.run`: Run Code
+- `coc-code-runner.stop`: Stop Run Code
 
 ---
 

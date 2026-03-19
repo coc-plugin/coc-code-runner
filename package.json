@@ -1,6 +1,6 @@
 {
   "name": "coc-code-runner",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Code Runner for coc.nvim",
   "author": "cyl <a1008611abcd@126.com>",
   "license": "MIT",
@@ -105,6 +105,10 @@
       {
         "command": "coc-code-runner.run",
         "title": "Run Code"
+      },
+      {
+        "command": "coc-code-runner.stop",
+        "title": "Stop Run Code"
       }
     ]
   },
