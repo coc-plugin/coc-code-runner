@@ -1,11 +1,4 @@
-import {
-  CodeActionProvider,
-  Command,
-  ProviderResult,
-  CodeActionKind,
-  CodeAction,
-  window,
-} from 'coc.nvim';
+import { CodeActionProvider, Command, ProviderResult, CodeActionKind, CodeAction } from 'coc.nvim';
 import { CodeAction as VsCodeAction } from 'vscode-languageserver-protocol';
 import { _process } from './index';
 export class RunCodeActionProvider implements CodeActionProvider {
@@ -13,7 +6,6 @@ export class RunCodeActionProvider implements CodeActionProvider {
   provideCodeActions(): ProviderResult<(Command | CodeAction)[]> {
     const actions: CodeAction[] = [];
     if (_process) {
-      window.showInformationMessage('ss');
       actions.push(
         VsCodeAction.create(
           'stop code runner',
