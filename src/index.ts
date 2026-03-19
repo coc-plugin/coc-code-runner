@@ -25,6 +25,9 @@ export async function activate(context: ExtensionContext): Promise<void> {
       if (_channel) {
         _channel.dispose();
       }
+      if (_process) {
+        _process.kill();
+      }
       _channel = window.createOutputChannel('coc-code-runner');
       let command:
         | { type: number; cmd: string; dir: string; inputFile: string; outputFile: string }
