@@ -1,6 +1,6 @@
 {
   "name": "coc-code-runner",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Code Runner for coc.nvim",
   "author": "cyl <a1008611abcd@126.com>",
   "license": "MIT",
@@ -58,7 +58,7 @@
             "fsharp": "fsi",
             "csharp": "scriptcs",
             "vbscript": "cscript //Nologo",
-            "typescript": "ts-node",
+            "typescript": "tsx",
             "coffeescript": "coffee",
             "scala": "scala",
             "swift": "swift",
