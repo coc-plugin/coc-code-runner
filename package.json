@@ -1,6 +1,6 @@
 {
   "name": "coc-code-runner",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Code Runner for coc.nvim",
   "author": "cyl <a1008611abcd@126.com>",
   "license": "MIT",
@@ -82,9 +82,6 @@
             "lisp": "sbcl --script",
             "kit": "kitc --run",
             "v": "v run",
-            "sass": "sass --style expanded",
-            "scss": "scss --style expanded",
-            "less": "cd $dir && lessc $fileName $fileNameWithoutExt.css",
             "FortranFreeForm": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
             "fortran-modern": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
             "fortran_fixed-form": "cd $dir && gfortran $fileName -o $fileNameWithoutExt && $dir$fileNameWithoutExt",
