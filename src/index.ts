@@ -21,7 +21,7 @@ export async function activate(context: ExtensionContext): Promise<void> {
       new RunCodeActionProvider(),
       'code-runner'
     ),
-    commands.registerCommand('coc-code-runner.stop', async () => {
+    commands.registerCommand('code-runner.stop', async () => {
       if (_channel) {
         _channel.appendLine('[Stopped] Process has been stopped by user.');
         _channel.hide();
@@ -33,7 +33,7 @@ export async function activate(context: ExtensionContext): Promise<void> {
       }
       window.showInformationMessage('Code execution stopped.');
     }),
-    commands.registerCommand('coc-code-runner.run', async () => {
+    commands.registerCommand('code-runner.run', async () => {
       if (_channel) {
         _channel.dispose();
       }

@@ -21,8 +21,8 @@ Code Runner for coc.nvim
 
 ## Commands
 
-- `coc-code-runner.run`: Run Code
-- `coc-code-runner.stop`: Stop Run Code
+- `code-runner.run`: Run Code
+- `code-runner.stop`: Stop Run Code
 
 ---
 
