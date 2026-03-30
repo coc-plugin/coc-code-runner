@@ -11,7 +11,7 @@ export class RunCodeActionProvider implements CodeActionProvider {
           'stop code runner',
           {
             title: 'stop code runner',
-            command: 'coc-code-runner.stop',
+            command: 'code-runner.stop',
             arguments: [],
           },
           CodeActionKind.Empty
@@ -23,7 +23,7 @@ export class RunCodeActionProvider implements CodeActionProvider {
           'code runner',
           {
             title: 'code runner',
-            command: 'coc-code-runner.run',
+            command: 'code-runner.run',
             arguments: [],
           },
           CodeActionKind.Empty

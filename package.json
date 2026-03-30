@@ -1,6 +1,6 @@
 {
   "name": "coc-code-runner",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Code Runner for coc.nvim",
   "author": "cyl <a1008611abcd@126.com>",
   "license": "MIT",
