@@ -9,15 +9,21 @@ let _channel: OutputChannel | null = null;
 export async function activate(context: ExtensionContext): Promise<void> {
   const enable = getConfigItem('enable', true);
   const executorMap = getConfigItem('executorMap', {});
+  const executorFt = getConfigItem('executorFt', []);
+  const task = getConfigItem('task', false);
   if (!enable) {
     return;
   }
   if (!_channel) {
     _channel = window.createOutputChannel('coc-code-runner');
   }
+  const supportedLanguages = [...Object.keys(executorMap)];
+  if (task) {
+    supportedLanguages.unshift(...executorFt)
+  }
   context.subscriptions.push(
     languages.registerCodeActionProvider(
-      Object.keys(executorMap).map((language) => ({ scheme: 'file', language })),
+      supportedLanguages.map((language) => ({ scheme: 'file', language })),
       new RunCodeActionProvider(),
       'code-runner'
     ),

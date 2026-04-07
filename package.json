@@ -1,6 +1,6 @@
 {
   "name": "coc-code-runner",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Code Runner for coc.nvim",
   "author": "cyl <a1008611abcd@126.com>",
   "license": "MIT",
@@ -17,6 +17,7 @@
     "prepare": "node esbuild.mjs"
   },
   "devDependencies": {
+    "@types/which": "^3.0.4",
     "coc.nvim": "^0.0.83-next.18",
     "esbuild": "^0.19.8",
     "typescript": "^5.3.3"
@@ -33,6 +34,19 @@
           "type": "boolean",
           "default": true,
           "description": "Enable coc-code-runner extension"
+        },
+        "coc-code-runner.task": {
+          "type": "boolean",
+          "default": false,
+          "description": "Enable coc-code-runner task provider"
+        },
+        "coc-code-runner.executorFt": {
+          "type": "array",
+          "default": [
+            "javascriptreact",
+            "typescriptreact",
+            "vue"
+          ]
         },
         "coc-code-runner.executorMap": {
           "type": "object",
@@ -110,6 +124,7 @@
     ]
   },
   "dependencies": {
-    "vscode-languageserver-protocol": "^3.17.5"
+    "vscode-languageserver-protocol": "^3.17.5",
+    "which": "^6.0.1"
   }
 }

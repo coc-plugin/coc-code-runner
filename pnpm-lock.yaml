@@ -11,7 +11,13 @@ importers:
       vscode-languageserver-protocol:
         specifier: ^3.17.5
         version: 3.17.5
+      which:
+        specifier: ^6.0.1
+        version: 6.0.1
     devDependencies:
+      '@types/which':
+        specifier: ^3.0.4
+        version: 3.0.4
       coc.nvim:
         specifier: ^0.0.83-next.18
         version: 0.0.83-next.24(@types/node@16.18.126)
@@ -165,6 +171,9 @@ packages:
   '@types/node@16.18.126':
     resolution: {integrity: sha512-OTcgaiwfGFBKacvfwuHzzn1KLxH/er8mluiy8/uM3sGXHaRe73RrSIj01jow9t4kJEW633Ov+cOexXeiApTyAw==}
 
+  '@types/which@3.0.4':
+    resolution: {integrity: sha512-liyfuo/106JdlgSchJzXEQCVArk0CvevqPote8F8HgWgJ3dRCcTHgJIsLDuee0kxk/mhbInzIZk3QWSZJ8R+2w==}
+
   coc.nvim@0.0.83-next.24:
     resolution: {integrity: sha512-5U1efxofnRxNlr4Y05n/bqsd/TSNYrIAoL0AOs55n2l4bUz6IeekmTL0V47mi0/P8fkQQokOuYbV4qELCxxbWA==}
     engines: {node: '>=16.18.0'}
@@ -175,6 +184,10 @@ packages:
     resolution: {integrity: sha512-aARqgq8roFBj054KvQr5f1sFu0D65G+miZRCuJyJ0G13Zwx7vRar5Zhn2tkQNzIXcBrNVsv/8stehpj+GAjgbg==}
     engines: {node: '>=12'}
     hasBin: true
+
+  isexe@4.0.0:
+    resolution: {integrity: sha512-FFUtZMpoZ8RqHS3XeXEmHWLA4thH+ZxCv2lOiPIn1Xc7CxrqhWzNSDzD+/chS/zbYezmiwWLdQC09JdQKmthOw==}
+    engines: {node: '>=20'}
 
   typescript@5.9.3:
     resolution: {integrity: sha512-jl1vZzPDinLr9eUt3J/t7V6FgNEw9QjvBPdysz9KfQDD41fQrC2Y4vKQdiaUpFT4bXlb1RHhLpp8wtm6M5TgSw==}
@@ -190,6 +203,11 @@ packages:
 
   vscode-languageserver-types@3.17.5:
     resolution: {integrity: sha512-Ld1VelNuX9pdF39h2Hgaeb5hEZM2Z3jUrrMgWQAu82jMtZp7p3vJT3BzToKtZI7NgQssZje5o0zryOrhQvzQAg==}
+
+  which@6.0.1:
+    resolution: {integrity: sha512-oGLe46MIrCRqX7ytPUf66EAYvdeMIZYn3WaocqqKZAxrBpkqHfL/qvTyJ/bTk5+AqHCjXmrv3CEWgy368zhRUg==}
+    engines: {node: ^20.17.0 || >=22.9.0}
+    hasBin: true
 
 snapshots:
 
@@ -264,6 +282,8 @@ snapshots:
 
   '@types/node@16.18.126': {}
 
+  '@types/which@3.0.4': {}
+
   coc.nvim@0.0.83-next.24(@types/node@16.18.126):
     dependencies:
       '@types/node': 16.18.126
@@ -294,6 +314,8 @@ snapshots:
       '@esbuild/win32-ia32': 0.19.12
       '@esbuild/win32-x64': 0.19.12
 
+  isexe@4.0.0: {}
+
   typescript@5.9.3: {}
 
   vscode-jsonrpc@8.2.0: {}
@@ -304,3 +326,7 @@ snapshots:
       vscode-languageserver-types: 3.17.5
 
   vscode-languageserver-types@3.17.5: {}
+
+  which@6.0.1:
+    dependencies:
+      isexe: 4.0.0

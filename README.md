@@ -13,6 +13,8 @@ Code Runner for coc.nvim
 
 - `coc-code-runner.enabled`: Enable coc-code-runner extension, default: `true`
 - `coc-code-runner.executorMap`: Set the executor of each language.
+- `coc-code-runner.executorFt`: Set the executor of each ft. 
+- `coc-code-runner.task`: Enable coc-code-runner task provider
 
 ## Code Actions
 
